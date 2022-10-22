@@ -15,13 +15,13 @@ const dev_db_url = "mongodb+srv://reinout:<reinout>@cluster0.kv45dpf.mongodb.net
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 
-// Set up mongoose connection
-const mongoose = require("mongoose");
+//// Set up mongoose connection
+//const mongoose = require("mongoose");
 //const mongoDB = "mongodb://127.0.0.1:27017";
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
-
+//mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+//const db = mongoose.connection;
+//db.on("error", console.error.bind(console, "MongoDB connection error:"));
+//
 
 
 
