@@ -11,12 +11,15 @@ var app = express();
 
 // Set up mongoose connection
 const mongoose = require("mongoose");
-const mongoDB = "mongodb://127.0.0.1:27017";
+//const mongoDB = "mongodb://127.0.0.1:27017";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 
+// Set up mongoose connection
+const dev_db_url = "mongodb+srv://reinout:<reinout>@cluster0.kv45dpf.mongodb.net/?retryWrites=true&w=majority;
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 
 
